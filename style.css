@@ -1,109 +1,217 @@
 
+/* ===========================
+   ENCABEZADO (HEADER)
+   ===========================
+   Este bloque da estilo a la parte superior de la página.
+   Usa un gradiente para que se vea más llamativo.
+*/
 .header {
+  /* Gradiente de izquierda a derecha con dos colores */
   background: linear-gradient(to right, #d0c5b1, #ff0000);
+
+  /* Color del texto */
   color: rgb(239, 233, 233);
+
+  /* Espacio interno para que el contenido no quede pegado */
   padding: 50px;
+
+  /* Margen externo */
   margin: 1px;
+
+  /* Centra el texto */
   text-align: center;
 }
+
+/* ===========================
+   HTML Y BODY
+   ===========================
+   Se asegura que la página use toda la altura de la pantalla
+*/
 html, body {
   height: 100%;
   margin: 20px;
 }
 
+/* ===========================
+   FONDO GENERAL DE LA PAGINA
+   ===========================
+   Aplica una imagen como fondo a toda la página
+*/
 body {
+  /* Imagen de fondo */
   background-image: url("imagenes/vegeta_normal.webp");
-  
-  background-size: cover;        
-  background-position: center;   /* centrada */
-  background-repeat: no-repeat;  /* no se repite */
 
+  /* La imagen cubre toda la pantalla */
+  background-size: cover;
+
+  /* La imagen queda centrada */
+  background-position: center;
+
+  /* La imagen no se repite */
+  background-repeat: no-repeat;
+
+  /* Fuente general del sitio */
   font-family: Arial, sans-serif;
 }
 
-
-
-/*paleta de colores*/
+/* ===========================
+   PALETA DE COLORES (VARIABLES)
+   ===========================
+   Aquí se guardan colores para reutilizarlos fácilmente
+*/
 :root {
   --color-principal: #011101;  
   --color-secundario: #2ecc71;  
   --color-fondo: #0aff27;       
   --color-texto: #000000;        
   --color-item: #f1154f;          
-  --color-item-hover: #bea5d7;   } 
-   
-/* Estilos generales */
+  --color-item-hover: #bea5d7;   
+}
+
+/* ===========================
+   ESTILOS GENERALES
+   ===========================
+   Aplica colores y estilos base usando las variables
+*/
 body {
-  font-family: Arial, sans-serif;
   background-color: var(--color-fondo);
   color: var(--color-texto);
   margin: 0;
   padding: 0;
 }
+
+/* Títulos nivel h2 centrados */
 h2 {
   text-align: center;
   color: var(--color-principal);
   margin-top: 20px;
 }
-/*galeria con grid*/
+
+/* ===========================
+   GALERÍA CON GRID
+   ===========================
+   Organiza las imágenes en forma de cuadrícula adaptable
+*/
 .galeria {
   display: grid;
+
+  /* Crea columnas automáticas según el tamaño de pantalla */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  /* Espacio entre los elementos */
   gap: 20px;
+
+  /* Espacio interno */
   padding: 20px;
+
+  /* Ancho máximo */
   max-width: 1200px;
+
+  /* Centra la galería */
   margin: auto;
 }
 
-/* Cada item de la galería */
-.item{
+/* ===========================
+   CADA ITEM DE LA GALERIA
+   ===========================
+   Estilo individual de cada tarjeta
+*/
+.item {
   background-color: var(--color-item);
   border-radius: 10px;
+
+  /* Oculta lo que sobresale */
   overflow: hidden;
+
+  /* Centra el texto */
   text-align: center;
-  transition: transform 0.3s, background-color 0.3s;
+
+  /* Animación suave */
+  transition: transform 0.4s, background-color 0.5s;
 }
-.item:hover{
+
+/* Efecto cuando paso el mouse */
+.item:hover {
   transform: scale(1.09);
   background-color: var(--color-item-hover);
-  
 }
+
+/* Imágenes dentro del item */
 .item img {
   width: 100%;
   height: 300px;
-  
+
+  /* La imagen se ajusta sin deformarse */
   object-fit: contain;
 }
+
+/* Título del item */
 .item h3 {
   margin: 10px 0 5px;
   color: var(--color-fondo);
   font-size: 1.1em;
 }
+
+/* Texto descriptivo */
 .item p {
   font-size: 0.9em;
   color: var(--color-texto);
   padding: 0 10px 10px;
 }
 
+/* ===========================
+   BANNER PROMOCIONAL
+   ===========================
+   Se usa una imagen como fondo
+   para llamar la atención del usuario
+*/
 .banner {
-  background: 
-    linear-gradient(135deg, #466e33, #3a0589),
-    url("imagenes/Kibito_shin_Artwork.webp");
+  /* Imagen usada como fondo del banner y gradiente*/
+  
+  background:  linear-gradient(to bottom, rgba(0,0,0,0.6), transparent),
+    url("imagenes/Kaio-shin_del_Oeste_Dokkan.webp");
 
+  /* La imagen se ajusta sin deformarse */
   background-size: contain;
-  background-position: center;
+
+  /* La imagen se coloca hacia la derecha */
+  background-position: right;
+
+  /* La imagen no se repite */
   background-repeat: no-repeat;
 
+  /* Espacio interno para separar el contenido */
   padding: 60px 20px;
+
+  /* Bordes redondeados para mejorar el diseño */
   border-radius: 15px;
+
+  /* Centra el banner y le da separación */
   margin: 30px auto;
   max-width: 1000px;
 }
 
+/* ===========================
+   CAPA CON TRANSPARENCIA
+   ===========================
+   Se usa para mejorar la
+   legibilidad del texto
+   sobre la imagen de fondo
+*/
 .banner-overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: rgb(166, 116, 116);
-  padding: 30px;
+  /* Color azul con transparencia */
+  background-color: rgba(3, 105, 214, 0.3);
+
+  /* Color del texto */
+  color: rgb(255, 255, 255);
+
+  /* Espacio interno */
+  padding: 55px;
+
+  /* Bordes redondeados */
   border-radius: 10px;
+
+  /* Texto centrado horizontalmente */
   text-align: center;
 }
+
