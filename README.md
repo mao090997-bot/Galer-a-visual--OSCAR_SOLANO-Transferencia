@@ -24,6 +24,7 @@ No es necesario instalar programas adicionales.
 
 Puedes ver el proyecto publicado en GitHub Pages en el siguiente enlace:
 
+ https://mao090997-bot.github.io/Galer-a-visual--OSCAR_SOLANO-Transferencia/
  
  
  
